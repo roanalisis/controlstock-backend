@@ -28,6 +28,12 @@ __pycache__/
 
 # Archivos del sistema
 .DS_Store
+
+# Scripts de mantenimiento con credenciales
+update_password.py
+seed.py
+test_bcrypt.py
+push_debug.txt
 Thumbs.db
 
 # Distribución / builds
