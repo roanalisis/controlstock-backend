@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Numeric, Date, DateTime, func
+from sqlalchemy import Column, Integer, String, Numeric, DateTime, func
 from app.database import Base
 
 
@@ -19,6 +19,7 @@ class Reporte(Base):
     producto = Column(String(255), nullable=False, index=True)
     stock_actual = Column(Numeric(10, 2), nullable=False, default=0)
     cantidad_vendida = Column(Numeric(10, 2), nullable=False, default=0)
+    cantidad = Column(Numeric(10, 2), nullable=True, default=0)
     fecha = Column(DateTime, server_default=func.current_timestamp(), index=True)
 
 

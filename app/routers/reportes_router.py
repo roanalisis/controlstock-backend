@@ -3,7 +3,6 @@ from typing import Optional
 
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
-from sqlalchemy import cast, Date
 
 from app.auth import get_current_user
 from app.database import get_db
@@ -45,6 +44,7 @@ def obtener_reportes(
             stock_actual=float(r.stock_actual),
             fecha=r.fecha,
             valor_critico=criticos.get(r.producto),
+            cantidad=float(r.cantidad) if r.cantidad is not None else None,
         )
         for r in reportes
     ]
