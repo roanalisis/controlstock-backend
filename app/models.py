@@ -20,6 +20,7 @@ class Reporte(Base):
     stock_actual = Column(Numeric(10, 2), nullable=False, default=0)
     cantidad_vendida = Column(Numeric(10, 2), nullable=False, default=0)
     cantidad = Column(Numeric(10, 2), nullable=True, default=0)
+    tipo = Column(String(100), nullable=True)
     fecha = Column(DateTime, server_default=func.current_timestamp(), index=True)
 
 

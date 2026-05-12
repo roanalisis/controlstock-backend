@@ -25,6 +25,7 @@ class ReporteOut(BaseModel):
     fecha: datetime
     valor_critico: Optional[float] = None
     cantidad: Optional[float] = None  # Ventas del día (suma del producto en el mismo día)
+    tipo: Optional[str] = None
 
     class Config:
         from_attributes = True

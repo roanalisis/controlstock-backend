@@ -45,6 +45,7 @@ def obtener_reportes(
             fecha=r.fecha,
             valor_critico=criticos.get(r.producto),
             cantidad=float(r.cantidad) if r.cantidad is not None else None,
+            tipo=r.tipo,
         )
         for r in reportes
     ]
